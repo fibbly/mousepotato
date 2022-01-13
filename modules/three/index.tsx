@@ -1,10 +1,18 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Box from "./models/Box";
 
 const Three: FunctionComponent = () => {
 	return (
-		<>
-			<h1>Three</h1>
-		</>
+		<Canvas>
+			<OrbitControls enableZoom={false} />
+			<pointLight intensity={1} position={[10, 10, 10]} />
+			<pointLight intensity={1} position={[-10, 10, -10]} />
+			<Suspense fallback={null}>
+				<Box />
+			</Suspense>
+		</Canvas>
 	);
 };
 
