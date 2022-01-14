@@ -29,7 +29,7 @@ function auth(session: Session, token: JWT) {
 			<p>Signed in as {session!.user?.email}</p>
 			<br />
 			<button
-				onClick={() => signOut({ callbackUrl: "http://localhost:3000/#auth" })}
+				onClick={() => signOut({ callbackUrl: process.env.AUTH_CALLBACK_URL })}
 			>
 				Sign out
 			</button>
@@ -47,7 +47,7 @@ function unauth() {
 			<p>Not signed in</p>
 			<button
 				onClick={() =>
-					signIn("github", { callbackUrl: "http://localhost:3000/#auth" })
+					signIn("github", { callbackUrl: process.env.AUTH_CALLBACK_URL })
 				}
 			>
 				Sign in with Github
