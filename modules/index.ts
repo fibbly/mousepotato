@@ -2,4 +2,4 @@ import Three from "./three";
 import Blender from "./blender";
 import Auth from "./auth";
 
-export default [Three];
+export default [Three, Blender];
