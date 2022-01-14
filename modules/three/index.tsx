@@ -14,7 +14,7 @@ const Three: FunctionComponent = () => {
 				<pointLight intensity={1} position={[10, 10, 10]} />
 				<pointLight intensity={1} position={[-10, 10, -10]} />
 				<Suspense fallback={<Loader />}>
-					<Earth position={[0, 0, -500]} />
+					<Earth position={[0, 100, -500]} />
 				</Suspense>
 			</Canvas>
 		</section>
