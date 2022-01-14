@@ -14,14 +14,9 @@ const Home: NextPage = () => {
 			</Head>
 			<main className={styles.main}>
 				{modules.map((Module, index) => {
-					return (
-						<section key={index} className={styles.section}>
-							<Module />
-						</section>
-					);
+					return <Module key={index} />;
 				})}
 			</main>
-			{/* <footer className={styles.footer}></footer> */}
 		</div>
 	);
 };

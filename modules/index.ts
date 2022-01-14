@@ -1,5 +1,5 @@
 import Three from "./three";
 import Blender from "./blender";
-import Backend from "./backend";
+import Auth from "./auth";
 
-export default [Three, Blender, Backend];
+export default [Three];
