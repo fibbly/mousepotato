@@ -1,7 +1,45 @@
 .auth {
+	box-shadow: 0px 10px 100px 50px white;
 	background-color: #0a2540;
+	text-align: center;
+	padding: 5rem 0;
 }
 
 .auth h1 {
 	color: white;
+	font-size: 5rem;
+}
+
+.github {
+	width: 64px;
+	height: 64px;
+	margin: 1rem;
+}
+
+.auth p {
+	color: white;
+}
+
+.auth button {
+	padding: 16px 32px;
+	color: white;
+	background-color: #00d4ff;
+	border-radius: 20px;
+	border: none;
+	margin: 1rem;
+	font-weight: bold;
+}
+
+.token {
+	padding: 2em;
+	background-color: #0c2e4e;
+	width: 50%;
+	margin: 2rem auto;
+	border-radius: 20px;
+	text-align: left;
+}
+
+.token pre {
+	color: white;
+	font-size: 1.2em;
 }
