@@ -8,6 +8,10 @@
 .auth h1 {
 	color: white;
 	font-size: 5rem;
+	background: -webkit-linear-gradient(45deg, #152de4, #00ff95 80%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .github {
@@ -23,23 +27,48 @@
 .auth button {
 	padding: 16px 32px;
 	color: white;
-	background-color: #00d4ff;
-	border-radius: 20px;
+	/* background-color: #00d4ff; */
+	background-image: linear-gradient(
+		to right,
+		#2bc0e4 0%,
+		#2bc0e4 50%,
+		#d1ecc6 100%
+	);
+	border-radius: 25px;
 	border: none;
 	margin: 1rem;
 	font-weight: bold;
+	font-size: 1rem;
 }
 
 .token {
 	padding: 2em;
 	background-color: #0c2e4e;
-	width: 50%;
+	width: 60vw;
 	margin: 2rem auto;
 	border-radius: 20px;
 	text-align: left;
+	box-shadow: 5px -5px 1px#05111e;
 }
 
 .token pre {
 	color: white;
 	font-size: 1.2em;
+}
+
+@media (max-width: 640px) {
+	.auth h1 {
+		font-size: 4rem;
+	}
+
+	.token pre {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 1280px) {
+	.token {
+		width: 90vw;
+		overflow-x: scroll;
+	}
 }

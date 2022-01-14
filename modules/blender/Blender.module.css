@@ -55,4 +55,15 @@
 	.flex {
 		flex-direction: column;
 	}
+	.section {
+		height: 150vh !important;
+	}
+	.content {
+		padding: 3em;
+		margin: 0 auto;
+	}
+	.content h1 {
+		text-align: center;
+		margin: 0 auto;
+	}
 }

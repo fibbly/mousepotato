@@ -3,7 +3,7 @@ import styles from "./Blender.module.css";
 
 const Blender: FunctionComponent = () => {
 	return (
-		<section>
+		<section className={styles.section}>
 			<div className={styles.wave}>
 				<svg
 					className={styles.shadow}
