@@ -1,11 +1,13 @@
 import { MeshProps, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import THREE from "three";
+import { Point, Points } from "@react-three/drei";
 
 const count = 5000;
 
 const Stars: React.FC<MeshProps> = (props) => {
 	const points = useRef<THREE.Points>(null!);
+
 	const positions = new Float32Array(count * 3);
 
 	for (let i = 0; i < count * 3; i++) {

@@ -34,7 +34,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
 		"../models/earth/earth.glb"
 	) as GLTFResult;
 
-	useFrame(() => (group.current!.rotation.y -= 0.001));
+	useFrame(() => (group.current!.rotation.y -= 0.005));
 
 	return (
 		<group ref={group} {...props} dispose={null}>

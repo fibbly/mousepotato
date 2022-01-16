@@ -1,32 +1,29 @@
-import { FunctionComponent, Suspense } from "react";
+import { FunctionComponent, Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import Earth from "@modules/three/models/Earth";
 import styles from "@modules/three/Three.module.css";
 import Loader from "@modules/three/components/loader";
 import Stars from "@modules/three/components/stars";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 const Three: FunctionComponent = () => {
+	// Instantiate a loader
+	//const loader = new DRACOLoader();
+
+	// Specify path to a folder containing WASM/JS decoding libraries.
+	//loader.setDecoderPath("../node_modules/three/examples/js/libs/draco/");
+
+	// Optional: Pre-fetch Draco WASM/JS module.
+	//loader.preload();
+
 	return (
 		<section className={styles.three}>
 			<Canvas>
 				<color attach="background" args={["black"]} />
-				<OrbitControls
-					enablePan={false}
-					enableZoom={false}
-					enableRotate={true}
-					minZoom={0}
-					maxZoom={1}
-					enableDamping={true}
-					minPolarAngle={Math.PI * 0.5}
-					maxPolarAngle={Math.PI * 0.5}
-					minAzimuthAngle={-(Math.PI * 0.05)}
-					maxAzimuthAngle={Math.PI * 0.05}
-				/>
 				<pointLight intensity={1} position={[10, 10, 10]} />
 				<pointLight intensity={1} position={[-10, 10, -10]} />
 				<Suspense fallback={<Loader />}>
-					<Earth position={[0, 100, -500]} />
+					{/* <Earth position={[0, 100, -500]} /> */}
 					<Stars />
 				</Suspense>
 			</Canvas>

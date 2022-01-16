@@ -10,7 +10,12 @@ export default NextAuth({
 			clientSecret: process.env.GITHUB_SECRET,
 			// https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps
 			// @ts-ignore
-			scope: "read:user",
+			scope: "read:user+repo",
+			authorization: {
+				params: {
+					scope: "read:user+repo",
+				},
+			},
 		}),
 		// GoogleProvider({
 		// 	clientId: process.env.GOOGLE_ID,

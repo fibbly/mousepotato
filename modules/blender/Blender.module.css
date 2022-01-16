@@ -51,19 +51,51 @@
 	filter: drop-shadow(25px 0px 5px rgba(0, 0, 0, 0.7));
 }
 
-@media (max-width: 640px) {
+@media (min-width: 360px) {
+	.content h1 {
+		font-size: 5rem;
+	}
+}
+
+@media (min-width: 640px) {
 	.flex {
 		flex-direction: column;
 	}
 	.section {
-		height: 150vh !important;
+		height: 200vh !important;
 	}
 	.content {
 		padding: 3em;
 		margin: 0 auto;
 	}
 	.content h1 {
+		font-size: 8rem;
 		text-align: center;
 		margin: 0 auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.content h1 {
+		font-size: 10rem;
+	}
+	.section {
+		height: 250vh !important;
+	}
+}
+
+@media (min-width: 1024px) {
+	.flex {
+		flex-direction: row;
+	}
+	.section {
+		height: 100vh !important;
+	}
+	.content {
+		padding: 10rem 8rem;
+	}
+	.content h1 {
+		text-align: left;
+		font-size: 6rem;
 	}
 }
