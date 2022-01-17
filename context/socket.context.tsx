@@ -44,7 +44,7 @@ function SocketsProvider(props: any) {
 			if (!document.hasFocus()) {
 				document.title = "New Message...";
 			}
-			setMessages([...messages, { message, username, time }]);
+			setMessages((messages) => [...messages, { message, username, time }]);
 		});
 	}, [socket]);
 

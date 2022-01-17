@@ -1,8 +1,27 @@
+.section {
+	width: 100%;
+	padding: 4rem;
+}
+
 .usernameWrapper {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .usernameInner {
+	display: flex;
+	background-color: rgba(256, 256, 256, 0.8);
+	padding: 5rem;
+	border-radius: 8px;
 }
 
-.container {
+.usernameInner input,
+.usernameInner button {
+	font-size: 1.25rem;
+}
+
+.usernameInner button {
+	margin-left: 1rem;
 }

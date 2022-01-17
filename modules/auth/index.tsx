@@ -11,16 +11,18 @@ const Auth: FunctionComponent = () => {
 	const [repos, setRepos] = useState(null);
 
 	useEffect(() => {
-		fetch("api/auth/token")
-			.then((res) => res.json())
-			.then((token) => {
-				setToken(token);
-				fetch(`https://api.github.com/users/${token.name}/repos`, {
-					method: "GET",
-				})
-					.then((res) => res.json())
-					.then((repos) => setRepos(repos));
-			});
+		if (session) {
+			fetch("api/auth/token")
+				.then((res) => res.json())
+				.then((token) => {
+					setToken(token);
+					fetch(`https://api.github.com/users/${token.name}/repos`, {
+						method: "GET",
+					})
+						.then((res) => res.json())
+						.then((repos) => setRepos(repos));
+				});
+		}
 	}, []);
 
 	if (session && token && repos) {
