@@ -27,7 +27,7 @@ const Chat: FunctionComponent = () => {
 
 	return (
 		<section className={styles.section}>
-			<h1>Chat</h1>
+			<h1>Real Time Communication</h1>
 			{!username && (
 				<div className={styles.usernameWrapper}>
 					<div className={styles.usernameInner}>

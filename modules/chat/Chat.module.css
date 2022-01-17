@@ -1,27 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
 .section {
-	width: 100%;
-	padding: 4rem;
+	padding: 2rem;
+	background-color: #232526;
+	display: flex;
+	flex-direction: column;
+}
+
+.section h1 {
+	width: fit-content;
+	color: white;
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	font-size: 3rem;
+	margin: 2rem auto;
+	letter-spacing: 0.15em;
+}
+
+.container {
+	height: 90%;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid grey;
+	border-radius: 25px;
+	padding: 1rem;
+	box-shadow: 0px 0px 100px 10px #0ff;
 }
 
 .usernameWrapper {
 	display: flex;
+	flex-grow: 1;
 	width: 100%;
-	align-items: center;
-	justify-content: center;
 }
 
 .usernameInner {
-	display: flex;
-	background-color: rgba(256, 256, 256, 0.8);
 	padding: 5rem;
-	border-radius: 8px;
+	border: 1px solid rgb(0, 179, 255);
+	border-radius: 25px;
+	width: 50%;
+	margin: 0 auto;
+	align-self: center;
+	box-shadow: 0px 0px 100px 10px #0ff;
 }
 
 .usernameInner input,
 .usernameInner button {
 	font-size: 1.25rem;
+	display: block;
+	margin: 0 auto;
+}
+
+.usernameInner input {
+	background-color: transparent;
+	padding: 1rem;
+	border: 1px solid gray;
+	border-radius: 25px;
+	color: gray;
+}
+
+.usernameInner input:focus {
+	outline: none !important;
+	border: 2px solid #0ff;
+	color: #0ff;
+}
+
+.usernameInner input::placeholder {
+	color: gray;
 }
 
 .usernameInner button {
-	margin-left: 1rem;
+	margin: 4rem auto 0;
+	border-radius: 25px;
+	border: none;
+	padding: 1rem 3rem;
+	color: white;
+	font-weight: bold;
+	background-image: linear-gradient(
+		to top,
+		rgb(9, 155, 245),
+		rgb(60, 205, 115)
+	);
 }

@@ -1,8 +1,8 @@
 .wrapper {
 	width: 250px;
-	background-color: rgba(256, 256, 256, 0.8);
+	height: 100%;
 	padding: 1rem;
-	border-right: solid 2px #333;
+	border-right: solid 1px grey;
 }
 
 .createRoomWrapper {
@@ -15,8 +15,27 @@
 	width: 100%;
 }
 
+.createRoomWrapper button {
+	background: linear-gradient(#0ff, rgb(169, 237, 113));
+	color: white;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 12px;
+	margin: 0.5rem auto;
+}
+
 .createRoomWrapper input {
 	margin-bottom: 0.5rem;
+	border: 1px solid gray;
+	border-radius: 8px;
+	padding: 0.5rem;
+	background-color: transparent;
+	color: white;
+}
+
+.createRoomWrapper input::placeholder {
+	color: white;
 }
 
 .roomList {
@@ -26,14 +45,23 @@
 
 .roomList button {
 	width: 100%;
-	margin-bottom: 0.5rem;
+	padding: 1rem 2rem;
 	display: flex;
 	cursor: pointer;
+	font-size: 1rem;
+	border: none;
+	border-bottom: 1px solid gray;
+	background-color: transparent;
+	color: gray;
 }
 
 .roomList button:disabled {
-	background-color: #ccc;
+	background-color: transparent;
 	cursor: default;
+	border: 1px solid #0ff;
+	border-radius: 8px;
+	color: #0ff;
+	font-weight: bold;
 }
 
 .roomList button span {

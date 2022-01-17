@@ -7,8 +7,6 @@ function Rooms() {
 	const { socket, roomId, rooms } = useSockets();
 	const newRoomRef = useRef<HTMLInputElement | null>(null);
 
-	console.log(rooms);
-
 	function handleCreateRoom() {
 		const roomName = newRoomRef.current?.value || "";
 
@@ -25,7 +23,6 @@ function Rooms() {
 		if (key === roomId) {
 			return;
 		}
-
 		socket.emit(EVENTS.CLIENT.JOIN_ROOM, key);
 	}
 

@@ -30,6 +30,12 @@ function Messages() {
 		messageRef.current!.value = "";
 	}
 
+	useEffect(() => {
+		messageRef.current?.scrollIntoView({
+			behavior: "smooth",
+		});
+	}, [messages]);
+
 	if (!roomId) {
 		return <div />;
 	}
@@ -39,11 +45,13 @@ function Messages() {
 			<div className={styles.messageList}>
 				{messages?.map(({ message, username, time }, index) => {
 					return (
-						<div key={index} className={styles.message}>
-							<span className={styles.messageSender}>
-								{username} - {time}
-							</span>
+						<div
+							key={index}
+							className={username === "You" ? styles.you : styles.message}
+						>
+							<span className={styles.messageSender}>{username}</span>
 							<span className={styles.messageBody}>{message}</span>
+							<span className={styles.timestamp}>{time}</span>
 						</div>
 					);
 				})}

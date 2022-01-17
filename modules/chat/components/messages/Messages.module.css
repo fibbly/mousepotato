@@ -1,6 +1,4 @@
 .wrapper {
-	min-height: 100vh;
-	height: 100vh;
 	width: calc(100% - 200px);
 	display: flex;
 	flex-direction: column;
@@ -9,7 +7,7 @@
 .messageList {
 	flex: 1;
 	overflow-y: scroll;
-	padding: 1rem;
+	padding: 2rem;
 }
 
 .messageList ul {
@@ -17,10 +15,10 @@
 	padding: 0;
 	margin: 0;
 }
+
 .messageBox {
 	display: flex;
 	width: 100%;
-	background-color: rgba(256, 256, 256, 0.8);
 	padding: 1rem;
 }
 
@@ -28,20 +26,43 @@
 	flex: 1;
 	padding: 1rem;
 	font-size: 1.25rem;
+	border-radius: 25px 0px 0px;
+	background-color: transparent;
+	border: 1px solid gray;
+	color: white;
+	max-height: 125px;
 }
+
+.messageBox textarea::placeholder {
+	color: gray;
+}
+
 .messageBox button {
 	margin-left: 0.5rem;
-	background-color: blueviolet;
+	background: transparent;
+	border: 1px solid gray;
+	border-radius: 0px 0px 25px;
+	padding: 1rem 2rem;
+	color: gray;
+	font-weight: bold;
 	font-size: 1.25rem;
 }
 
+.messageBox button:hover {
+	border: 1px solid rgb(141, 255, 255);
+	color: rgb(141, 255, 255);
+}
+
 .message {
+	max-width: 50%;
+	width: fit-content;
 	margin-bottom: 1rem;
 	padding: 1rem;
-	border-radius: 8px;
-	border: solid 2px #333;
-	font-size: 1.25rem;
-	background-color: rgba(256, 256, 256, 0.8);
+	border-radius: 25px;
+	border: none;
+	font-size: 1rem;
+	color: white;
+	background-image: linear-gradient(to right, #35c1a0, #97c135);
 }
 
 .messageInner {
@@ -51,10 +72,32 @@
 }
 
 .messageSender {
-	color: #333;
-	font-size: 0.75rem;
+	color: #ffe5a8;
+	font-weight: bold;
+}
+
+.you {
+	margin-left: auto;
+	width: fit-content;
+	max-width: 50%;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border-radius: 25px;
+	border: none;
+	font-size: 1rem;
+	color: white;
+	background-image: linear-gradient(to right, #3574c1, #6435c1);
 }
 
 .messageBody {
 	word-wrap: break-word;
+	display: block;
+	margin: 0.25rem 0;
+}
+
+.timestamp {
+	font-size: 0.75rem;
+	color: rgb(244, 244, 244);
+	text-align: right;
+	display: block;
 }
